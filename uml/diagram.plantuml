@@ -1,0 +1,43 @@
+@startuml title
+package Western {
+    class Barman {
+        -barName : String
+    }
+    
+    class Cowboy {
+        -fame : int
+        -quality : String
+    }
+    
+    class Human {
+        -NAME : String
+        -favoriteDrink : String
+    }
+    
+    class Lady {
+        -dressColor : String
+        -captive : boolean
+    }
+    
+    class Ruffian {
+        -look : String
+        -nbLadies : int
+        -reward : int
+        -jailed : boolean
+        -ladies : ArrayList<Lady>
+    }
+    
+    class Sheriff {
+    }
+    
+    class Story {
+    }
+    
+    Human <|-- Barman
+    Human <|-- Cowboy
+    Human <|-- Lady
+    Human <|-- Ruffian
+    Cowboy <|-- Sheriff
+}
+
+@enduml
